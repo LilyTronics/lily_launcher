@@ -1,0 +1,77 @@
+{
+    "settings": {
+        "frame_background": "#303030",
+        "text_color": "#c0c0c0",
+        "button_background": "#474747",
+        "button_hover_background": "#606060",
+        "menu_text_color": "#c0c0c0",
+        "menu_hover_color": "#f0f0f0",
+        "menu_hover_background": "#404040"
+    },
+    "launchers": [
+        {
+            "name": "My Computer",
+            "icon": "my_computer.png",
+            "command": "explorer.exe shell:MyComputerFolder"
+        },
+        {
+            "name": "Tools",
+            "icon": "tools.png",
+            "items": [
+                {
+                    "name": "Notepad",
+                    "icon": "notepad.png",
+                    "command": "notepad.exe"
+                },
+                {
+                    "name": "Calculator",
+                    "icon": "calculator.png",
+                    "command": "calc.exe"
+                },
+                {
+                    "name": "Snipping tool",
+                    "icon": "snipping_tool.png",
+                    "command": "snippingtool.exe"
+                }
+            ]
+        },
+        {
+            "name": "Folders",
+            "icon": "folder.png",
+            "items": [
+                {
+                    "name": "Personal",
+                    "icon": "folder.png",
+                    "items": [
+                        {
+                            "name": "My Documents",
+                            "icon": "folder.png",
+                            "command": "explorer.exe shell:Personal"
+                        },
+                        {
+                            "name": "My Pictures",
+                            "icon": "folder.png",
+                            "command": "explorer.exe shell:My Pictures"
+                        }
+                    ]
+                },
+                {
+                    "name": "System folders",
+                    "icon": "folder.png",
+                    "items": [
+                        {
+                            "name": "Program Files",
+                            "icon": "folder.png",
+                            "command": "C:\\Program files"
+                        },
+                        {
+                            "name": "Windows",
+                            "icon": "folder.png",
+                            "command": "C:\\Windows"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
