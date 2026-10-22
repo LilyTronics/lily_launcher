@@ -4,3 +4,6 @@
 
 # Temporary files
 /temp/*
+
+# Build output
+/dist
