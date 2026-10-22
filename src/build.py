@@ -44,10 +44,12 @@ def build_exe():
     )
 
     print('Remove build output')
-    for folder in ["build"]:
+    for folder in ['build']:
         if Path(folder).exists():
             shutil.rmtree(folder)
-    Path('version_info.txt').unlink()
+    for filename in ['version_info.txt', 'LilyLauncher.spec']:
+        if Path(filename).exists():
+            Path(filename).unlink()
 
 
 if __name__ == '__main__':
