@@ -51,3 +51,12 @@ You can also specify an absolute path (not recommended).
 ![Tools menu](src/screenshot_tools_menu.png)
 
 ![Folders menu](src/screenshot_folder_menu.png)
+
+## Startup
+
+Create a shortcut for the executable in the Windows Startup folder.
+Windows key + r:
+
+```
+shell:startup
+```
