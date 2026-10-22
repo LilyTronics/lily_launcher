@@ -33,7 +33,7 @@ Custom icons can be used. The following folder structure should be used:
   |- icons/                 # Create 'icons' folder for your own icons
   |
   |- LilyLauncher.exe       # The executable
-  |- lily_launcher.json     # Custom configuration
+  |- lily_launcher.json     # Custom configuration (copy from 'lib' folder)
 ```
 
 You can set an icon in the config file like this:
