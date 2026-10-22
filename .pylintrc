@@ -1,0 +1,9 @@
+[MESSAGES CONTROL]
+disable = broad-exception-caught,
+          missing-class-docstring,
+          missing-function-docstring,
+          too-few-public-methods
+
+[TYPECHECK]
+ignored-modules = PySide6,
+                  ctypes
