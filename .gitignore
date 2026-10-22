@@ -1,4 +1,5 @@
-# Python byte code
+# Python stuff
+/.venv
 **/*.pyc
 
 # Temporary files
