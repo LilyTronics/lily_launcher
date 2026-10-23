@@ -7,6 +7,8 @@ import json
 import threading
 import time
 
+from src.run_command import list_files
+
 
 class ConfigReader():
 
@@ -64,13 +66,23 @@ class ConfigReader():
         style_sheet += '} '
         return style_sheet
 
+    def _update_launchers(self, launchers):
+        for launcher in launchers:
+            if 'items' in launcher:
+                self._update_launchers(launcher['items'])
+            elif 'command' in launcher:
+                if launcher['command'].startswith('list_files:'):
+                    items = list_files(launcher['command'])
+                    launcher.pop('command')
+                    launcher['items'] = items
+        return launchers
 
     def _check_for_changes(self):
         while True:
             try:
                 data = json.load(open(self._filename, 'r', encoding='utf-8'))
                 settings = data.get('settings', {})
-                launchers = data.get('launchers', [])
+                launchers = self._update_launchers(data.get('launchers', []))
                 if launchers != self._launchers or settings != self._settings:
                     self._settings = settings
                     self._launchers = launchers

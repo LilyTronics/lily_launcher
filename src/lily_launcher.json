@@ -72,6 +72,17 @@
                     ]
                 }
             ]
+        },
+        {
+            "name": "Auto generated folder",
+            "icon": "folder.png",
+            "items": [
+                {
+                    "name": "Source folder",
+                    "icon": "folder.png",
+                    "command": "list_files:src"
+                }
+            ]
         }
     ]
 }
