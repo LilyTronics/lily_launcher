@@ -46,11 +46,11 @@ The launcher will first search for `my_computer.png` in `LilyLauncher\lib\icons`
 This will make sure your launcher keeps working after you copy it to another PC.
 You can also specify an absolute path (not recommended).
 
-![Main Window](src/screenshot_main.png)
+![Main Window](src/screenshots/main.png)
 
-![Tools menu](src/screenshot_tools_menu.png)
+![Tools menu](src/screenshots/tools_menu.png)
 
-![Folders menu](src/screenshot_folder_menu.png)
+![Folders menu](src/screenshots/folder_menu.png)
 
 ## Startup
 
