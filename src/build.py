@@ -35,6 +35,7 @@ def build_exe():
             "--windowed",
             "--add-data", "icons;icons",
             "--add-data", "src/lily_launcher.json;.",
+            "--add-data", "src/add_to_startup.reg;.",
             "--contents-directory", "lib",
             "--name", "LilyLauncher",
             "--version-file", "version_info.txt",

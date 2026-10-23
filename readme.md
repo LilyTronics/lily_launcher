@@ -54,9 +54,5 @@ You can also specify an absolute path (not recommended).
 
 ## Startup
 
-Create a shortcut for the executable in the Windows Startup folder.
-Windows key + r:
-
-```
-shell:startup
-```
+In the `lib` folder is a registry file `add_to_startup.reg` to add an entry in the registry.
+Make sure the path is correct before executing this file.
