@@ -47,7 +47,7 @@ class ConfigReader():
         if value is not None:
             style_sheet += f'QPushButton:hover {{ background-color: {value}; }} '
         # Menu
-        style_sheet += 'QMenu { padding: 8px; font-size: 16px; '
+        style_sheet += 'QMenu { padding: 8px; font-size: 16px; menu-scrollable: 1;'
         value = self._settings.get('menu_text_color')
         if value is not None:
             style_sheet += f'color: {value}; '
@@ -55,7 +55,7 @@ class ConfigReader():
         if value is not None:
             style_sheet += f'background-color: {value}; '
         style_sheet += '} '
-        style_sheet += 'QMenu::item { padding: 4px; margin: 2px;} '
+        style_sheet += 'QMenu::item { padding: 4px 24px 4px 4px; margin: 2px;} '
         style_sheet += 'QMenu::item:selected { '
         value = self._settings.get('menu_hover_color')
         if value is not None:
