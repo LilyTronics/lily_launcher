@@ -6,6 +6,8 @@ import os
 import shlex
 import subprocess
 
+from fnmatch import fnmatch
+
 
 def launch(command):
     command = command.strip()
@@ -26,10 +28,15 @@ def launch(command):
 
 def list_files(command):
     items = []
-    folder = os.path.abspath(command.split(':')[-1])
+    file_filter = '*'
+    params = command.split(':', 1)[-1]
+    params = params.split(';')
+    folder = os.path.abspath(params[0])
+    if len(params) > 1:
+        file_filter = params[1]
     for current_folder, sub_folders, filenames in os.walk(folder):
         sub_folders.sort()
-        for filename in filenames:
+        for filename in [f for f in filenames if fnmatch(f, file_filter)]:
             rel_path = current_folder[len(folder):].strip(os.sep)
             parts = rel_path.split(os.sep)
             if parts[0] != '':
@@ -70,6 +77,12 @@ def list_files(command):
 
 if __name__ == '__main__':
 
-    _items = list_files('list_files:src')
+    _test_path = os.path.abspath('src')
+    print(_test_path)
+    _items = list_files(f'list_files:{_test_path};*.py')
+    for _item in _items:
+        print(_item)
+
+    _items = list_files(f'list_files:{_test_path}')
     for _item in _items:
         print(_item)

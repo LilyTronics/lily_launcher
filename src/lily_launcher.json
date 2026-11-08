@@ -80,7 +80,7 @@
                 {
                     "name": "Source folder",
                     "icon": "folder.png",
-                    "command": "list_files:src"
+                    "command": "list_files:src;*.py"
                 }
             ]
         }

@@ -2,7 +2,8 @@
 disable = broad-exception-caught,
           missing-class-docstring,
           missing-function-docstring,
-          too-few-public-methods
+          too-few-public-methods,
+          too-many-locals
 
 [TYPECHECK]
 ignored-modules = PySide6,
