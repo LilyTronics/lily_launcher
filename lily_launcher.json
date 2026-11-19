@@ -1,0 +1,18 @@
+{
+	"Development projects": {
+		"name": "Lily Launcher",
+		"icon": "folder.png",
+		"items": [
+			{
+				"name": "Project folder",
+				"icon": "folder.png",
+				"command": "C:\\Workspace\\git_projects\\lily_launcher"
+			},
+			{
+				"name": "Code",
+				"icon": "code.png",
+				"command": "C:\\Workspace\\git_projects\\lily_launcher\\lily_launcher.code-workspace"
+			}
+		]
+	}
+}
